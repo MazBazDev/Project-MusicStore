@@ -357,8 +357,14 @@ public class Main {
         System.out.println("\033[0;92m+================================[ Select an option ]===============================+");
         System.out.println("\033[0;92m|\033[0;93m" + instrument.toString());
         System.out.println("\033[0;92m|\033[0;93m 1 \033[0;92m· \033[0;97mChange price");
-        System.out.println("\033[0;92m|\033[0;93m 2 \033[0;92m· \033[0;97mExhibit");
-        System.out.println("\033[0;92m|\033[0;93m 3 \033[0;92m· \033[0;97mPut in stock");
+
+        if (instrument.getState() == Instruments.Status.stock) {
+            System.out.println("\033[0;92m|\033[0;93m 2 \033[0;92m· \033[0;97mExhibit");
+
+        } else {
+            System.out.println("\033[0;92m|\033[0;93m 3 \033[0;92m· \033[0;97mPut in stock");
+
+        }
 
 
         if (instrument instanceof ElectricGuitar) {
