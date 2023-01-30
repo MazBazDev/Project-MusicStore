@@ -43,6 +43,7 @@ public class ElectricGuitar extends StringsInstruments {
     @Override
     public String toString() {
         return super.toString() +
+                " | Electric guitar " +
                 "| microType=" + microType +
                 "| tuneType=" + tuneType + " ]";
     }

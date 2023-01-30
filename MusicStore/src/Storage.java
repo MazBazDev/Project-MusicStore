@@ -96,11 +96,11 @@ public class Storage {
 
         Iterator<Instruments> iter = instruments.iterator();
 
-        System.out.println("\033[0;92m+================================[ All exhibited ]==================================+");
-        while (iter.hasNext()) {
-            if (iter.next().getState() == Instruments.Status.display) {
-                System.out.println("\033[0;92m|\033[0;93m " + counter +" \033[0;92m· \033[0;97m" + iter.next().toString());
+        System.out.println("\033[0;92m+==============================[ All exhibited ]=============================+");
 
+        for (Instruments i:instruments) {
+            if (i.getState() == Instruments.Status.display) {
+                System.out.println("\033[0;92m|\033[0;93m " + counter +" \033[0;92m· \033[0;97m" + i.toString());
                 amount++;
             }
             counter++;
@@ -109,11 +109,10 @@ public class Storage {
         if (amount > 0) {
             System.out.println("\033[0;92m| \033[0;97mAmount : \033[0;93m" + counter);
         } else {
-            System.out.println("\033[0;92m| \033[0;97mAny instruments exhibited");
+            System.out.println("\033[0;92m| \033[0;97mAny instruments displayed");
         }
         System.out.println("\033[0;92m+===================================================================================+");
     }
-
     public void displayAllStocked() {
         int counter = 0;
         int amount = 0;
@@ -121,10 +120,10 @@ public class Storage {
         Iterator<Instruments> iter = instruments.iterator();
 
         System.out.println("\033[0;92m+==============================[ All stocked ]=============================+");
-        while (iter.hasNext()) {
-            if (iter.next().getState() == Instruments.Status.stock) {
-                System.out.println("\033[0;92m|\033[0;93m " + counter +" \033[0;92m· \033[0;97m" + iter.next().toString());
 
+        for (Instruments i:instruments) {
+            if (i.getState() == Instruments.Status.stock) {
+                System.out.println("\033[0;92m|\033[0;93m " + counter +" \033[0;92m· \033[0;97m" + i.toString());
                 amount++;
             }
             counter++;
