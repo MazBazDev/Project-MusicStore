@@ -424,7 +424,15 @@ public class Storage {
             
         } else if (instrument instanceof AcousticDrumKit || instrument instanceof ElectronicDrumKit) {
             switch (option) {
-                case 4 -> ((HasSound) instrument).PlaySound();
+                case 4:
+                    System.out.println(((HasSound) instrument).PlaySound());
+                case 5:
+                    if (instrument instanceof AcousticDrumKit) {
+                        ((AcousticDrumKit) instrument).addPercussion(Main.selectAcousticPercussion());
+                    } else if (instrument instanceof  ElectronicPercussion) {
+                        ((ElectronicDrumKit) instrument).addPercussion(Main.selectElectronicPercussion());
+
+                    }
             }
         }
 

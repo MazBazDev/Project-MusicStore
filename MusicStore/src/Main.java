@@ -217,10 +217,10 @@ public class Main {
     public static AcousticPercussions selectAcousticPercussion() {
         System.out.println("\033[0;92m+==============================[ Select an instrument ]=============================+");
         System.out.println("\033[0;92m|\033[0;93m 1 \033[0;92m· \033[0;97mBass drum");
-        System.out.println("\033[0;92m|\033[0;93m 2 \033[0;92m· \033[0;97Snare drum");
-        System.out.println("\033[0;92m|\033[0;93m 3 \033[0;92m· \033[0;97Cymbal");
-        System.out.println("\033[0;92m|\033[0;93m 4 \033[0;92m· \033[0;97Charleston");
-        System.out.println("\033[0;92m|\033[0;93m 5 \033[0;92m· \033[0;97Tom");
+        System.out.println("\033[0;92m|\033[0;93m 2 \033[0;92m· \033[0;97mSnare drum");
+        System.out.println("\033[0;92m|\033[0;93m 3 \033[0;92m· \033[0;97mCymbal");
+        System.out.println("\033[0;92m|\033[0;93m 4 \033[0;92m· \033[0;97mCharleston");
+        System.out.println("\033[0;92m|\033[0;93m 5 \033[0;92m· \033[0;97mTom");
         System.out.println("\033[0;92m+===================================================================================+");
         System.out.println("|\033[0;93m 0 \033[0;92m· \033[0;91mGo back");
         System.out.println("\033[0;92m+===================================================================================+");
@@ -255,6 +255,7 @@ public class Main {
         System.out.println("\033[0;92m|\033[0;93m 2 \033[0;92m· \033[0;Tom pad\033[0;92m");
         System.out.println("\033[0;92m|\033[0;93m 3 \033[0;92m· \033[0;Cymbal pad\033[0;92m");
         System.out.println("\033[0;92m+===================================================================================+");
+        System.out.println("|\033[0;93m 0 \033[0;92m· \033[0;91mGo back\033[0;92m");
         System.out.println("|\033[0;93m 0 \033[0;92m· \033[0;91mGo back\033[0;92m");
         System.out.println("\033[0;92m+===================================================================================+");
 
@@ -379,6 +380,7 @@ public class Main {
 
         } else if (instrument instanceof AcousticDrumKit || instrument instanceof  ElectronicDrumKit) {
             System.out.println("\033[0;92m|\033[0;93m 4 \033[0;92m· \033[0;97mPlay all sounds");
+            System.out.println("\033[0;92m|\033[0;93m 5 \033[0;92m· \033[0;97mAdd percussion");
         }
         System.out.println("\033[0;92m+===================================================================================+");
         System.out.println("\033[0;92m|\033[0;93m 0 \033[0;92m· \033[0;91mGo back");
